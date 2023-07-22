@@ -1,0 +1,83 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+.top {
+    padding: 40px 375px 96px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header__logo {
+    height: 40px;
+    width: 137px;
+}
+
+.header__nav a {
+    color: #000;
+    font-family: Gilroy-Medium;
+    font-size: 14px;
+    margin-left: 30px;
+}
+
+.header__nav a:first-child {
+    color: #F25822;
+}
+
+.top__content {
+    padding: 89px 0 162px;
+    display: flex;
+}
+
+.top__h1 {
+    margin-bottom: 17px;
+    color: #000;
+    font-family: Gilroy-Bold;
+    font-size: 60px;
+}
+
+.top__text {
+    color: #888;
+    font-family: Gilroy-Medium;
+    font-size: 20px;
+}
+
+.top__buttons {
+    font-family: Gilroy-Bold;
+    font-size: 15px;
+    margin-top: 37px;
+}
+
+.button__start {
+    width: 140px;
+    height: 50px;
+    border-radius: 50px;
+    border: none;
+    margin-right: 72px;
+    background: #F25822;
+    box-shadow: 4px 4px 8px 0px rgba(242, 88, 34, 0.20);
+    color: #FFF;
+}
+
+.button__watch {
+    color: #AAA;
+    border: none;
+    background: none;
+}
+
+.top__logo {
+    padding: 96px 0;
+    display: flex;
+    justify-content: space-between;
+}
