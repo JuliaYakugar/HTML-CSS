@@ -323,3 +323,71 @@
     object-fit: contain;
   }
 }
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .container {
+    max-width: 767px;
+  }
+
+  .header__right .header__item {
+    margin-right: 0;
+  }
+
+  .header__item:not(:first-child) {
+    display: none;
+  }
+
+  .intro {
+    height: 363px;
+  }
+
+  .intro__wrap {
+    background: none;
+    justify-content: center;
+  }
+
+  .thebrand {
+    font-size: 38px;
+  }
+
+  .ofluxerious {
+    font-size: 20px;
+  }
+
+  .fashion {
+    font-size: 20px;
+  }
+ 
+  .category {
+    margin-bottom: 64px;
+  }
+
+  .category__wrap {
+    flex-direction: column;
+  }
+
+  .category__wrap .category__item {
+    width: auto;
+  }
+
+  .category__item:not(:last-child) {
+    height: 248px;
+  }
+
+  .category__item:last-child {
+    height: 111px;    
+  }
+
+  .items__text {
+    margin-bottom: 64px;
+  }
+
+  .items__button {
+    margin-top: 40px;
+    margin-bottom: 85px;
+  }
+
+  .shadow {
+    max-width: 360px;
+  }
+}
