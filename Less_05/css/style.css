@@ -200,6 +200,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
 
 .items__info {
@@ -249,6 +250,185 @@
   padding: 14px 38px 13px;
   color: #F16D7F;
   text-decoration: none;
+}
+.buttonAllProducts:hover {
+  background-color: #F16D7F;
+  color: #FFF;
+}
+
+.infoBox {
+  background-color: #222224;
+}
+
+.infoBox__wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 103px 10px 104px;
+  color: #FBFBFB;
+  background-color: #222224;
+}
+
+.infoBox__info {
+  width: 360px;
+  text-align: center;
+}
+
+.infoBox__name {
+  font-size: 20px;
+  margin: 28px 0 16px;
+  line-height: 24px;
+}
+
+.infoBox__text {
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 17px;
+}
+
+.connect {
+  position: relative;
+}
+
+.connect__wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 86px 10px 126px;
+}
+
+.connect__info {
+  width: 360px;
+  text-align: center;
+  font-size: 20px;
+}
+
+.connect__text {
+  margin-top: 30px;
+}
+
+.connect__name {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.connect__message {
+  display: flex;
+  justify-content: center;
+}
+
+.connect__message__input {
+  height: 49px;
+  width: 256px;
+  background-color: #E1E1E1;
+  border: none;
+  border-radius: 50px 0 0 50px;
+  padding-left: 22px;
+}
+
+.connect__message__input:focus {
+  outline: none;
+}
+
+.connect__message__button {
+  height: 49px;
+  width: 100px;
+  padding-right: 7px;
+  padding-right: 30px;
+  background-color: #F16D7F;
+  border: none;
+  border-radius: 0 50px 50px 0;
+  padding-left: 22px;
+  color: #FFFFFF;
+  text-align: center;
+  cursor: pointer;
+}
+
+.connect__background {
+  background-image: url(../img/connect_background.jpg);
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  opacity: 0.3;
+  z-index: -9999;
+}
+
+.connect__background-gradient {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+  background-image: linear-gradient(to left, #f8f8f8, transparent);
+}
+
+.footer__wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+}
+
+.footer__copyright {
+  color: #FBFBFB;
+}
+
+.footer__network {
+  display: flex;
+}
+
+.footer__contacts {
+  background-color: #222224;
+}
+
+.network {
+  background-color: #FFF;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.network:not(:last-child) {
+  margin-right: 7px;
+}
+
+.network:hover {
+  background-color: #F16D7F;
+}
+
+.network:hover path {
+  fill: #FFF;
+}
+
+.items__picture::before {
+  content: "";
+  background-color: rgba(33, 22, 22, 0.7);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: none;
+}
+
+.items__picture:hover::before{
+  display: block;
+}
+
+.items__picture::after {
+  position: absolute;
+  content: "Add to Cart";
+  color: #FFF;
+  padding: 14px;
+  border: 1px solid #FFF;
+  display: none;
+}
+
+.items__picture:hover::after {
+  display: block;
 }
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
@@ -322,6 +502,47 @@
     height: 100%;
     object-fit: contain;
   }
+
+  .infoBox__wrap {
+    flex-direction: column;
+    align-items: center;
+    padding: 0 10px 64px;
+  }
+
+  .infoBox__info {
+    margin-top: 48px;
+  }
+
+  .infoBox__name {
+    margin-top: 25px;
+  }
+
+  .connect__wrap {
+    flex-direction: column;
+    padding: 64px 10px 140px;
+  }
+
+  .connect__background-gradient {
+    background-image: linear-gradient(to bottom, #f8f8f8, transparent);
+  }
+
+  .connect__info {
+    margin-bottom: 68px;
+  }
+
+  .smallText {
+    color: #222224;
+    font-family: Lato;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 162%;
+  }
+
+  .footer__wrap {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
 }
 
 @media screen and (min-width: 320px) and (max-width: 767px) {
@@ -389,5 +610,47 @@
 
   .shadow {
     max-width: 360px;
+  }
+
+  .infoBox__wrap {
+    flex-direction: column;
+    align-items: center;
+    padding: 0 10px 64px;
+  }
+
+  .infoBox__info {
+    margin-top: 48px;
+  }
+
+  .infoBox__name {
+    margin-top: 25px;
+  }
+
+  .connect__wrap {
+    flex-direction: column;
+    padding: 64px 10px 140px;
+  }
+
+  .connect__background-gradient {
+    background-image: linear-gradient(to bottom, #f8f8f8, transparent);
+  }
+
+  .connect__info {
+    margin-bottom: 68px;
+  }
+
+  .smallText {
+    color: #222224;
+    font-family: Lato;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 153%;
+  }
+
+  .footer__wrap {
+    flex-direction: column-reverse;
+    justify-content: space-evenly;
+    height: 143px;
   }
 }
