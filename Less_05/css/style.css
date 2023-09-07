@@ -24,9 +24,30 @@
 .header__logo {
   margin-right: 40px;
 }
-
+.header__item:hover {
+  cursor: pointer;
+}
 .header__item:not(:last-child) {
   margin-right: 33px;
+}
+
+
+.header__backet {
+  position: relative;
+}
+
+.header__backet::after {
+  content: "5";
+  position: absolute;
+  top: -20px;
+  right: -10px;
+  width: 19px;
+  height: 19px;
+  background-color: #F16D7F;
+  border-radius: 50px;
+  text-align: center;
+  color: #FFF;
+  font-size: 12px;
 }
 
 .intro {
@@ -130,19 +151,19 @@
 }
 
 .forWomen {
-  background-image: url(../img/pict/for_women.png);
+  background-image: url(../img/pict/for_women.jpg);
 }
 
 .forMen {
-  background-image: url(../img/pict/for_men.png);
+  background-image: url(../img/pict/for_men.jpg);
 }
 
 .forKids {
-  background-image: url(../img/pict/for_kids.png);
+  background-image: url(../img/pict/for_kids.jpg);
 }
 
 .accesories {
-  background-image: url(../img/pict/accesories.png);
+  background-image: url(../img/pict/accesories.jpg);
 }
 
 .shadow {
@@ -425,10 +446,79 @@
   padding: 14px;
   border: 1px solid #FFF;
   display: none;
+  cursor: pointer;
 }
 
 .items__picture:hover::after {
   display: block;
+}
+
+.header__nav {
+  position: absolute;
+  top: 82px;
+  right: 0;
+  z-index: 10;
+  display: none;
+}
+
+.nav {
+  width: 232px;
+  background-color: #fff;
+  padding: 37px 34px;
+  font-size: 14px;
+  line-height: 17px;
+  -webkit-box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+          box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+}
+
+.nav__wrap {
+  position: relative;
+}
+
+.nav__close {
+  position: absolute;
+  right: -10px;
+  top: -10px;
+}
+
+.nav__title {
+  margin-bottom: 14px;
+}
+
+.nav__item {
+  list-style: none;
+  margin-bottom: 10px;
+  margin-left: 20px;
+}
+
+.nav__link {
+  text-decoration: none;
+  color: #6F6E6E;
+}
+
+.nav__heading {
+  color: #F16D7F;
+  margin-top: 10px;
+  margin-bottom: 12px;
+}
+
+@media (max-width: 475px) {
+  .nav {
+    width: 100%;
+    height: auto;
+  }
+}
+
+#burger {
+  display: none;
+}
+
+#burger:checked ~ .header__nav {
+  display: block;
+}
+
+#burger:not(checked) ~ .header__nav {
+  display: none;
 }
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
@@ -554,7 +644,7 @@
     margin-right: 0;
   }
 
-  .header__item:not(:first-child) {
+  .header__item:not(:nth-child(2)) {
     display: none;
   }
 
