@@ -1,7 +1,7 @@
 * {
   padding: 0;
   margin: 0;
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
 }
 
 .container {
@@ -24,13 +24,14 @@
 .header__logo {
   margin-right: 40px;
 }
+
 .header__item:hover {
   cursor: pointer;
 }
+
 .header__item:not(:last-child) {
   margin-right: 33px;
 }
-
 
 .header__backet {
   position: relative;
@@ -272,6 +273,7 @@
   color: #F16D7F;
   text-decoration: none;
 }
+
 .buttonAllProducts:hover {
   background-color: #F16D7F;
   color: #FFF;
@@ -435,7 +437,7 @@
   display: none;
 }
 
-.items__picture:hover::before{
+.items__picture:hover::before {
   display: block;
 }
 
@@ -467,8 +469,7 @@
   padding: 37px 34px;
   font-size: 14px;
   line-height: 17px;
-  -webkit-box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
-          box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+  box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
 }
 
 .nav__wrap {
@@ -508,7 +509,6 @@
     height: auto;
   }
 }
-
 #burger {
   display: none;
 }
@@ -525,101 +525,81 @@
   .container {
     max-width: 1024px;
   }
-
   .intro {
     height: 368px;
   }
-
   .intro__wrap {
     background-position: 0px bottom;
     background-size: contain;
   }
-
   .intro__text {
-    max-width: 283px;;
+    max-width: 283px;
   }
-
   .thebrand {
     font-size: 44px;
   }
-
   .ofluxerious {
     font-size: 24px;
   }
-
   .fashion {
     font-size: 24px;
   }
-
   .category {
     margin-bottom: 110px;
   }
   .category__wrap {
     gap: 12px;
   }
-
   .category__item {
     height: 116px;
   }
-
   .category__item:not(:last-child) {
     width: 32%;
     margin: 0 0 20px 0;
     height: 167px;
   }
-
-  .category__wrap > *{
+  .category__wrap > * {
     background-size: contain;
   }
-
   .items__button {
     width: 100%;
     text-align: center;
     margin-top: 32px;
     margin-bottom: 70px;
   }
-
   .items__card {
     max-height: none;
   }
-
   .items__wrap {
     gap: 14px;
   }
-
   .items__wrap img {
     width: 100%;
     height: 100%;
-    object-fit: contain;
+    -o-object-fit: contain;
+       object-fit: contain;
   }
-
   .infoBox__wrap {
     flex-direction: column;
     align-items: center;
     padding: 0 10px 64px;
   }
-
   .infoBox__info {
     margin-top: 48px;
   }
-
   .infoBox__name {
     margin-top: 25px;
   }
-
   .connect__wrap {
     flex-direction: column;
     padding: 64px 10px 140px;
   }
-
   .connect__background-gradient {
     background-image: linear-gradient(to bottom, #f8f8f8, transparent);
   }
-
   .connect__info {
     margin-bottom: 68px;
   }
-
   .smallText {
     color: #222224;
     font-family: Lato;
@@ -628,107 +608,83 @@
     font-weight: 400;
     line-height: 162%;
   }
-
   .footer__wrap {
     padding-left: 32px;
     padding-right: 32px;
   }
 }
-
 @media screen and (min-width: 320px) and (max-width: 767px) {
   .container {
     max-width: 767px;
   }
-
   .header__right .header__item {
     margin-right: 0;
   }
-
   .header__item:not(:nth-child(2)) {
     display: none;
   }
-
   .intro {
     height: 363px;
   }
-
   .intro__wrap {
     background: none;
     justify-content: center;
   }
-
   .thebrand {
     font-size: 38px;
   }
-
   .ofluxerious {
     font-size: 20px;
   }
-
   .fashion {
     font-size: 20px;
   }
- 
   .category {
     margin-bottom: 64px;
   }
-
   .category__wrap {
     flex-direction: column;
   }
-
   .category__wrap .category__item {
     width: auto;
   }
-
   .category__item:not(:last-child) {
     height: 248px;
   }
-
   .category__item:last-child {
-    height: 111px;    
+    height: 111px;
   }
-
   .items__text {
     margin-bottom: 64px;
   }
-
   .items__button {
     margin-top: 40px;
     margin-bottom: 85px;
   }
-
   .shadow {
     max-width: 360px;
   }
-
   .infoBox__wrap {
     flex-direction: column;
     align-items: center;
     padding: 0 10px 64px;
   }
-
   .infoBox__info {
     margin-top: 48px;
   }
-
   .infoBox__name {
     margin-top: 25px;
   }
-
   .connect__wrap {
     flex-direction: column;
     padding: 64px 10px 140px;
   }
-
   .connect__background-gradient {
     background-image: linear-gradient(to bottom, #f8f8f8, transparent);
   }
-
   .connect__info {
     margin-bottom: 68px;
   }
-
   .smallText {
     color: #222224;
     font-family: Lato;
@@ -737,10 +693,9 @@
     font-weight: 400;
     line-height: 153%;
   }
-
   .footer__wrap {
     flex-direction: column-reverse;
     justify-content: space-evenly;
     height: 143px;
   }
-}
+}/*# sourceMappingURL=style.css.map */
