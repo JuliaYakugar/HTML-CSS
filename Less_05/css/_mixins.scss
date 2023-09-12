@@ -1,0 +1,15 @@
+@mixin fontStyle($colorFont, $sizeFont, $weightFont: 400) {
+    color: $colorFont;
+    font-family: Lato;
+    font-size: $sizeFont;
+    font-style: normal;
+    font-weight: $weightFont;
+    line-height: normal;
+}
+
+@mixin flexStyle($justifyContent) {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: $justifyContent;
+}
