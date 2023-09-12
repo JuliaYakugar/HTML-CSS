@@ -1,0 +1,174 @@
+a {
+    text-decoration: none;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0.4
+    }
+    to {
+        opacity: 1
+    }
+}
+
+.product {
+
+    &__intro {
+        padding: 60px 0;
+        background-color: $colorLightPink;
+
+        &__wrap {
+            @include flexStyle(space-between);
+        }
+
+        &__text {
+            @include fontStyle($colorDarkPink, 24px)
+        }
+
+        &__bread {
+            display: flex;
+
+            & li::marker{
+                content: none;
+            }
+
+            & li:not(:last-child) a {
+                @include fontStyle($colorDarkGrey, 14px, 300);
+            }
+
+            & li:last-child a {
+                @include fontStyle($colorDarkPink, 14px, 700);
+            }
+
+            & span {
+                margin: 0 5px;
+            }
+
+        }
+    }
+
+    &__foto {
+
+        &-slider {
+            background-color: #F7F7F7;
+            @include flexStyle(center);
+            position: relative;
+            padding: 10px 40px;
+            transition: 0.5s;
+            height: 750px;
+    
+            &-item {
+
+                @include flexStyle(center);
+                animation-name: fade;
+                animation-duration: 0.7s;
+
+                &-img {
+                    width: 600px;
+                    height: 725px;
+                    @include flexStyle(center);
+                }
+        
+                &-btn {
+                    background-color: rgba(42, 42, 42, 0.15);
+                    @include flexStyle(center);
+                    position: absolute;
+                    height: 47px;
+                    width: 47px;
+                    border: none;              
+                    transition: 0.5s;
+            
+                    &left {
+                        left: 0;
+                    }
+                
+                    &right {
+                        right: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    &__info {
+
+        &__wrap {
+            @include flexStyle(center);
+            flex-direction: column;
+            position: relative;
+            box-sizing: border-box;
+            background-color: #fff;
+            border: 1px solid #EAEAEA;
+            top: -50px;
+            padding: 65px 295px!important;
+            text-align: center;
+
+            &-collection {
+                @include fontStyle($colorDarkPink, 14px, 300);
+            }
+
+            &-name {
+                @include fontStyle($colorDarkGrey, 18px, 300);
+            }
+
+            &-text {
+                @include fontStyle($colorDarkGrey, 14px, 300);
+                margin: 48px 0 32px;
+            }
+
+            &-price {
+                @include fontStyle($colorDarkPink, 24px, 300);
+            }
+
+            &-darkhr {
+                background-color: $colorLightGrey;
+                border: none;
+                width: 640px;
+                height: 1px;
+                margin: 65px 0;
+            }
+
+            &-pinkhr {
+                background-color: $colorDarkPink;
+                border: none;
+                width: 65px;
+                height: 3px;
+                margin: 12px 0;
+            }
+
+            &-filter {
+
+                & a {
+                    @include fontStyle($colorDarkGrey, 14px);
+                    padding-right: 22px;
+                    &:after {
+                        content: "";
+                        background-image: url(../img/arrow.svg);
+                        background-repeat: no-repeat;
+                        height: 10px;
+                        width: 12px;
+                        margin-left: 5px;
+                        display: inline-block;
+                        vertical-align: middle;
+                    }
+                }
+            }
+
+            &-button {
+                @include flexStyle(center);
+                border: 1px solid $colorDarkPink;
+                padding: 15px 57px;
+                margin-top: 48px;
+
+                & a {
+                    margin-left: 23px;
+                }
+            }
+        }
+    
+    }
+
+    &__items {
+        margin: 129px 0;
+    }
+}
