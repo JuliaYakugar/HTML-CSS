@@ -1,6 +1,7 @@
 @import 'vars';
 @import 'mixins';
 @import 'product';
+@import 'catalog';
 
 * {
     padding: 0;
@@ -386,7 +387,7 @@
     height: 100%;
     position: absolute;
     z-index: -1;
-    background-image: linear-gradient(to left, #f8f8f8, transparent);
+    background-image: linear-gradient(to left, #f8f8f8 40%, transparent);
   }
   
   .footer__wrap {

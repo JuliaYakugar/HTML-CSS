@@ -1,0 +1,162 @@
+.catalog {
+
+    & details > summary {
+        list-style: none;
+    }
+
+    &__wrap {
+        @include flexStyle(space-between);
+    }
+    
+    &__filter {
+        width: 100%;    
+        margin: 37px 0 60px;
+        display: flex;
+        gap: 30px;
+
+        &-left {
+            flex:1;
+            position: relative;
+            
+            & > details {
+                cursor: pointer;
+                padding: 13px 16px 16px;
+                position: absolute;
+                z-index: 9999;
+                box-sizing: border-box;
+
+                &[open] {
+                    background-color: $colorLightWhite;
+                    box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+                }
+
+                & > summary {
+                    
+                    & span {
+                        margin-right: 10px;
+                    }
+                }
+
+                &[open] > summary {
+                    color: $colorDarkPink;
+
+                    & path {
+                        fill: $colorDarkPink;
+                    }
+                }
+            }
+
+            &-content {
+                
+                width: 360px;
+                @include fontStyle($colorDarkGrey, 14px);
+
+                & li {
+                    list-style-type: none;
+                    margin: 18px 15px;
+                }
+            }
+
+            &-category {
+                display: block;
+                padding: 11px;
+                border-left: 5px solid $colorDarkPink;
+                border-bottom: 1px solid $colorLightGrey;
+                margin: 16px 0;
+                @include fontStyle($colorDarkPink, 14px);
+            }
+        }
+
+        &-center {
+            flex:2;
+            display: flex;
+            gap: 28px;
+            margin-top: 13px;
+            
+            & details {
+                position: relative;
+
+                & summary {
+                    @include fontStyle($colorDarkGrey, 14px);
+                    padding-right: 22px;
+                    cursor: pointer;
+
+                    &:after {
+                        content: "";
+                        background-image: url(../img/arrow.svg);
+                        background-repeat: no-repeat;
+                        height: 10px;
+                        width: 12px;
+                        margin-left: 10px;
+                        display: inline-block;
+                        vertical-align: middle;
+                    }
+                }
+
+                & div {
+                    display: flex;
+                    flex-direction: column;
+                    box-shadow: 6px 4px 35px 0px rgba(0, 0, 0, 0.21);
+                    padding: 9px;
+                    margin-top: 5px;
+                    position: absolute;
+                    z-index: 9999;
+                    background-color: $colorLightWhite;
+                    width: 80px;
+
+                    & label {
+                        margin-bottom: 9px;
+
+                        &::before {
+                            content: '';
+                            display: inline-block;
+                            width: 13px;
+                            height: 13px;
+                            border: 1px solid $colorLightGrey;
+                            margin-right: 9px;
+                        }
+                    }
+
+                    & input {
+                        position: absolute;
+                        z-index: -1;
+                        opacity: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    &__products {
+        @include flexStyle(space-between);
+    }
+
+    &__pagination {
+        border: 1px solid $colorLightGrey;
+        padding: 15px;
+        margin: 18px auto 96px;
+
+        & ul {
+            display: flex;
+            align-items: center;
+
+            & li::marker {
+                content: none;
+            }
+        }
+
+        & a {
+            color:#8b8b8b;
+            padding: 8px 16px;
+            text-decoration: none;
+            font-weight: 300;
+            font-size: 16px;
+            line-height: 19px;
+            display: flex;
+
+            &.catalog__pagination-active {
+                color: #EF5B70;
+            }
+        }
+    }
+}
