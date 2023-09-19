@@ -46,6 +46,16 @@
                 }
             }
 
+            &:hover {
+                color: $colorDarkPink;
+                transition: 0.3s;
+
+                & path{
+                    fill: $colorDarkPink;
+                    transition: 0.3s;
+                }
+            }
+
             &-content {
                 
                 width: 360px;
@@ -123,6 +133,11 @@
                         opacity: 0;
                     }
                 }
+
+                &:hover summary {
+                    font-weight: 700;
+                    transition: 0.3s
+                }
             }
         }
     }
@@ -156,6 +171,11 @@
 
             &.catalog__pagination-active {
                 color: #EF5B70;
+            }
+
+            &:hover {
+                font-weight: 700;
+                transition: 0.3s;
             }
         }
     }
