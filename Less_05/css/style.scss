@@ -2,6 +2,7 @@
 @import 'mixins';
 @import 'product';
 @import 'catalog';
+@import 'cart';
 
 * {
     padding: 0;
@@ -176,6 +177,11 @@
     width: 100%;
     height: 100%;
     position: absolute;
+
+    &:hover {
+      background: rgba(33, 22, 22, 0.9);
+      cursor: pointer;
+    }
   }
   
   .category__text {
@@ -227,6 +233,10 @@
     align-items: center;
     justify-content: center;
     position: relative;
+
+    &:hover {
+      cursor: pointer;
+    }
   }
   
   .items__info {
@@ -276,10 +286,12 @@
     padding: 14px 38px 13px;
     color: #F16D7F;
     text-decoration: none;
-  }
-  .buttonAllProducts:hover {
-    background-color: #F16D7F;
-    color: #FFF;
+
+    &:hover {
+      background-color: #F16D7F;
+      color: #FFF;
+      transition: 0.3s;
+    }
   }
   
   .infoBox {
@@ -360,7 +372,6 @@
   .connect__message__button {
     height: 49px;
     width: 100px;
-    padding-right: 7px;
     padding-right: 30px;
     background-color: #F16D7F;
     border: none;
@@ -369,6 +380,11 @@
     color: #FFFFFF;
     text-align: center;
     cursor: pointer;
+
+    &:hover {
+      font-weight: 700;
+      transition: 0.3s;
+    }
   }
   
   .connect__background {
@@ -425,10 +441,12 @@
   
   .network:hover {
     background-color: #F16D7F;
+    transition: 0.5s;
   }
   
   .network:hover path {
     fill: #FFF;
+    transition: 0.5s;
   }
   
   .items__picture::before {
@@ -499,6 +517,11 @@
   .nav__link {
     text-decoration: none;
     color: #6F6E6E;
+
+    &:hover {
+      font-weight: 700;
+      transition: 0.3s;
+    }
   }
   
   .nav__heading {

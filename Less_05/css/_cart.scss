@@ -1,0 +1,175 @@
+.cart {
+
+    &__wrap {
+        margin-top: 96px!important;
+        margin-bottom: 128px!important;
+        @include flexStyle(space-between);
+        align-items: start;
+
+        &-items {
+            display: flex;
+            flex-direction: column;
+
+            &-block {
+                width: 652px;
+                height: 306px;
+                display: flex;
+                margin-bottom: 40px;
+                background-color: $colorLightWhite;
+                filter: drop-shadow(17px 19px 24px rgba(0, 0, 0, 0.13));
+                
+                & > img {
+                    height: 100%;
+                }
+            }
+
+            &-info {
+                margin: 22px 22px 62px 30px;
+                width: 100%;
+                position: relative;
+
+                & p {
+                    color: #575757;
+                    @include fontStyle($colorDarkGrey, 22px);
+                    margin-bottom: 6px;
+
+                    &:nth-child(1) {
+                        font-size: 24px;
+                    }
+
+                    &:nth-child(2) {
+                        font-size: 24px;
+                        margin-bottom: 42px;
+                    }
+
+                    & .price {
+                        color: $colorDarkPink;
+                    }
+
+                    & .quantity {
+                        padding:0 15px;
+                        border: 1px solid $colorLightGrey;
+                        margin-left: 25px;
+                    }
+                }
+
+                & svg {
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    cursor: pointer;
+
+                    &:hover path {
+                        fill: $colorDarkPink;
+                        transition: 0.5s;
+                    }
+                }
+                
+            }
+
+            &-buttons {
+                @include flexStyle(space-between);
+                margin-top: 32px;
+
+                & button {
+                    padding: 16px 40px;
+                    border: 1px solid $colorLightGrey;
+                    background: $colorLightWhite;
+                    @include fontStyle($colorDarkBlack, 14px, 300);
+
+                    &:hover {
+                        background-color: $colorDarkGrey;
+                        color:$colorLightWhite;
+                        cursor: pointer;
+                        transition: 0.5s;
+                    }
+                }
+            }
+        }
+
+        &-order {
+            display: flex;
+            flex-direction: column;
+
+            &-adress {
+
+                & > * {
+                    display: block;
+                    margin-bottom: 20px;
+                }
+
+                & p {
+                    @include fontStyle($colorDarkBlack, 16px, 300)
+                }
+
+                & input {
+                    padding: 13px 17px 16px;
+                    border: 1px solid $colorLightGrey;
+                    background: $colorLightWhite;
+                    color: $colorDarkBlack;
+
+                    &[type="text"] {
+                        width: 360px;
+                    }
+
+                    &[type="submit"] {
+                        color: $colorLightGrey;
+                    }
+
+                    &::-webkit-input-placeholder {
+                        @include fontStyle($colorLightGrey, 13px, 300)
+                    }
+                } 
+            }
+
+            &-allprice {
+                margin-top: 35px;
+                background: #F5F3F3;
+                padding: 44px;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+
+                & .subtotal {
+                    @include fontStyle($colorDarkGrey, 11px);
+                    margin-bottom: 12px;
+
+                    & span {
+                        margin-left: 10px;
+                    }
+                }
+                & .grandtotal {
+                    @include fontStyle($colorDarkGrey, 16px, 300);
+
+                    & span {
+                        @include fontStyle($colorDarkPink, 16px, 700);
+                        margin-left: 20px;
+                    }
+                }
+
+                & hr {
+                    background: $colorDarkGrey; 
+                    width: 100%;
+                    margin-top: 21px;
+                    margin-bottom: 17px;
+                }
+
+                & input {
+                    width: 100%;
+                    padding-top: 15px;
+                    padding-bottom: 16px;
+                    background-color: $colorDarkPink;
+                    @include fontStyle($colorLightWhite, 16px, 300);
+                    border: 1px solid $colorDarkPink;
+
+                    &:hover {
+                        cursor: pointer;
+                        background-color: $colorLightWhite;
+                        color: $colorDarkPink;
+                        transition: 0.5s;
+                    }
+                }
+            }
+        }
+    }
+}

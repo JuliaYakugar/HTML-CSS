@@ -21,7 +21,7 @@ a {
             @include flexStyle(space-between);
         }
 
-        &__text {
+        &__text h1 {
             @include fontStyle($colorDarkPink, 24px)
         }
 
@@ -34,10 +34,20 @@ a {
 
             & li:not(:last-child) a {
                 @include fontStyle($colorDarkGrey, 14px, 300);
+
+                &:hover {
+                    font-weight: 700;
+                    transition: 0.3s;
+                }
             }
 
             & li:last-child a {
                 @include fontStyle($colorDarkPink, 14px, 700);
+
+                &:hover {
+                    color: $colorDarkGrey;
+                    transition: 0.3s;
+                }
             }
 
             & span {
@@ -84,6 +94,11 @@ a {
                 
                     &right {
                         right: 0;
+                    }
+
+                    &:hover {
+                        background-color: $colorDarkPink;
+                        cursor: pointer;
                     }
                 }
             }
@@ -141,6 +156,7 @@ a {
                 & a {
                     @include fontStyle($colorDarkGrey, 14px);
                     padding-right: 22px;
+
                     &:after {
                         content: "";
                         background-image: url(../img/arrow.svg);
@@ -150,6 +166,11 @@ a {
                         margin-left: 5px;
                         display: inline-block;
                         vertical-align: middle;
+                    }
+
+                    &:hover {
+                        font-weight: 700;
+                        transition: 0.3s;
                     }
                 }
             }
@@ -163,6 +184,12 @@ a {
                 & a {
                     margin-left: 23px;
                     color: $colorDarkGrey;
+                }
+
+                &:hover {
+                    background-color: $colorLightPink;
+                    cursor: pointer;
+                    transition: 0.3s;
                 }
             }
         }
