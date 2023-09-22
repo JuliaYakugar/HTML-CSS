@@ -29,7 +29,6 @@
                 position: relative;
 
                 & p {
-                    color: #575757;
                     @include fontStyle($colorDarkGrey, 22px);
                     margin-bottom: 6px;
 
@@ -47,9 +46,12 @@
                     }
 
                     & .quantity {
-                        padding:0 15px;
+                        padding:0 10px;
+                        width: 30px;
                         border: 1px solid $colorLightGrey;
                         margin-left: 25px;
+                        @include fontStyle($colorDarkGrey, 22px);
+                        margin-bottom: 6px;
                     }
                 }
 
@@ -114,6 +116,10 @@
 
                     &[type="submit"] {
                         color: $colorLightGrey;
+                        &:hover {
+                            color: $colorLightWhite;
+                            background-color: $colorLightGrey;
+                        }
                     }
 
                     &::-webkit-input-placeholder {
