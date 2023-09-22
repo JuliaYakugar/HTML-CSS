@@ -582,6 +582,113 @@ a {
   transition: 0.5s;
 }
 
+.registration__wrap {
+  margin-top: 64px !important;
+  margin-bottom: 96px !important;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: start;
+}
+.registration__wrap-input form {
+  display: flex;
+  flex-direction: column;
+}
+.registration__wrap-input form > * {
+  margin-bottom: 20px;
+  width: 360px;
+  box-sizing: border-box;
+}
+.registration__wrap-input form p {
+  color: #000;
+  font-family: Lato;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+.registration__wrap-input form p.text {
+  color: #B1B1B1;
+  font-family: Lato;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  margin-bottom: 40px !important;
+}
+.registration__wrap-input form input {
+  padding: 13px 17px 16px;
+  border: 1px solid #B1B1B1;
+  color: #000;
+  font-family: Lato;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+.registration__wrap-input form input::-webkit-input-placeholder {
+  color: #B1B1B1;
+  font-family: Lato;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+.registration__wrap-input form input[type=submit] {
+  width: 167px;
+  padding-top: 16px;
+  padding-bottom: 17px;
+  background-color: #F16D7F;
+  color: #FFF;
+  font-family: Lato;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  border: none;
+}
+.registration__wrap-input form input[type=submit]:hover {
+  background-color: #F8F3F4;
+  color: #F16D7F;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.registration__wrap-input form input[type=radio] {
+  margin-right: 10px;
+  margin-top: 14px !important;
+  margin-bottom: 14px !important;
+}
+.registration__wrap-input form label {
+  margin-right: 20px;
+}
+.registration__wrap-info {
+  width: 652px;
+}
+.registration__wrap-info ul li {
+  list-style-type: none;
+  color: #000;
+  font-family: Lato;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  margin-bottom: 16px;
+}
+.registration__wrap-info ul li::before {
+  content: url(../img/checkMark.svg);
+  margin-right: 23px;
+}
+.registration__wrap-info p {
+  margin-bottom: 22px;
+  color: #000;
+  font-family: Lato;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -925,6 +1032,15 @@ a {
 .connect__name {
   text-align: center;
   margin-bottom: 32px;
+}
+
+.smallText {
+  color: #222224;
+  font-family: Lato;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 162%;
 }
 
 .connect__message {

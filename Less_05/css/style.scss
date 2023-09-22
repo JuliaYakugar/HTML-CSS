@@ -3,6 +3,7 @@
 @import 'product';
 @import 'catalog';
 @import 'cart';
+@import 'registration';
 
 * {
     padding: 0;
@@ -349,6 +350,15 @@
   .connect__name {
     text-align: center;
     margin-bottom: 32px;
+  }
+
+  .smallText {
+    color: #222224;
+    font-family: Lato;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 162%;
   }
   
   .connect__message {
