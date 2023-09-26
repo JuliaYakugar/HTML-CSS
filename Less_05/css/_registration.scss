@@ -5,83 +5,101 @@
         margin-bottom: 96px!important;
         @include flexStyle(space-between);
         align-items: start;
+    }
+}
 
-        &-input {
+.formdata {
 
-            & form {
-                display: flex;
-                flex-direction: column;
+    & form {
+        display: flex;
+        flex-direction: column;
 
-                & > * {
-                    margin-bottom: 20px;
-                    width: 360px;
-                    box-sizing: border-box;
-                }
+        & > * {
+            margin-bottom: 20px;
+            width: 360px;
+            box-sizing: border-box;
+        }
+    }   
+    
+    & p {
+        @include fontStyle($colorDarkBlack, 16px, 300);
 
-                & p {
-                    @include fontStyle($colorDarkBlack, 16px, 300);
+        &.text {
+            @include fontStyle($colorLightGrey, 13px, 300);
+            margin-bottom: 40px!important;
+        }
+    }
 
-                    &.text {
-                        @include fontStyle($colorLightGrey, 13px, 300);
-                        margin-bottom: 40px!important;
-                    }
-                }
+    & input {
+        padding: 13px 17px 16px;
+        border: 1px solid $colorLightGrey;
+        @include fontStyle($colorDarkBlack, 13px, 300);
 
-                & input {
-                    padding: 13px 17px 16px;
-                    border: 1px solid $colorLightGrey;
-                    @include fontStyle($colorDarkBlack, 13px, 300);
-
-                    &::-webkit-input-placeholder {
-                        @include fontStyle($colorLightGrey, 13px, 300);
-                    }
-
-                    &[type="submit"] {
-                        width: 167px;
-                        padding-top: 16px;
-                        padding-bottom: 17px;
-                        background-color: $colorDarkPink;
-                        @include fontStyle($colorLightWhite, 14px);
-                        border: none;
-
-                        &:hover {
-                            background-color: $colorLightPink;
-                            color: $colorDarkPink;
-                            cursor: pointer;
-                            transition: 0.3s;
-                        }
-                    }
-
-                    &[type="radio"] {
-                        margin-right: 10px;
-                        margin-top: 14px!important;
-                        margin-bottom: 14px!important;
-                    }
-                }
-
-                & label {
-                    margin-right: 20px;
-                }
-            }     
+        &::-webkit-input-placeholder {
+            @include fontStyle($colorLightGrey, 13px, 300);
         }
 
-        &-info {
-            width: 652px;
+        &[type="submit"] {
+            width: 167px;
+            padding-top: 16px;
+            padding-bottom: 17px;
+            background-color: $colorDarkPink;
+            @include fontStyle($colorLightWhite, 14px);
+            border: none;
 
-            & ul li {
-                list-style-type: none;
-                @include fontStyle($colorDarkBlack, 24px, 300);
-                margin-bottom: 16px;
-                &::before {
-                    content: url(../img/checkMark.svg);
-                    margin-right: 23px;
-                }
-            }
-
-            & p {
-                margin-bottom: 22px;
-                @include fontStyle($colorDarkBlack, 24px, 300);
+            &:hover {
+                background-color: $colorLightPink;
+                color: $colorDarkPink;
+                cursor: pointer;
+                transition: 0.3s;
             }
         }
-    }  
+
+        &[type="radio"] {
+            margin-right: 10px;
+            margin-top: 14px!important;
+            margin-bottom: 14px!important;
+        }
+    }
+
+    & label {
+        margin-right: 20px;
+    }
+}
+
+.info {
+    width: 652px;
+
+    & ul li {
+        list-style-type: none;
+        @include fontStyle($colorDarkBlack, 24px, 300);
+        margin-bottom: 16px;
+        &::before {
+            content: url(../img/checkMark.svg);
+            margin-right: 23px;
+        }
+    }
+
+    & p {
+        margin-bottom: 22px;
+        @include fontStyle($colorDarkBlack, 24px, 300);
+    }
+}
+
+@media (max-width: 1024px) {
+
+    .registration {
+
+        &__wrap {
+            margin-top: 40px!important;
+            flex-wrap: nowrap;
+            gap: 22px;
+        }
+    }
+    .info {
+
+        & p, li {
+            font-size: 16px!important;
+        }
+    }
 }

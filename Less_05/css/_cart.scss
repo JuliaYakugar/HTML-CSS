@@ -179,3 +179,37 @@
         }
     }
 }
+
+@media (max-width: 1024px) {
+    .cart {
+
+        &__wrap {
+            align-items: center;
+            flex-direction: column;
+
+            &-items {
+                width: 100%;
+                padding-bottom: 64px;
+
+                &-block {
+                    width: 100%;
+                }
+
+                &-buttons {
+                    justify-content: center;
+                    gap: 48px;
+                }
+            }
+
+            &-order {
+                flex-direction: row;
+                gap: 15px;
+                width: 100%;
+
+                & > * {
+                    flex: 1;
+                }
+            }
+        }
+    }
+}

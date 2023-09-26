@@ -180,3 +180,37 @@
         }
     }
 }
+
+@media (max-width: 1024px) {
+
+    .catalog {
+
+        &__filter {
+            margin: 24px 0 40px;
+            
+            &-center {
+                flex: none;
+            }
+        }
+
+        &__products {
+            justify-content: space-around;
+        }
+
+        &__pagination {
+            padding: 11px;
+
+            & a {
+                padding: 0 8px;
+            }
+        }
+    }
+
+    .items {
+
+        &__card {
+            margin-bottom: 16px!important;
+        }
+    }
+    
+}

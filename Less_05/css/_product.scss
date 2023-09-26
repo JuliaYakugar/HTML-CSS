@@ -200,3 +200,31 @@ a {
         margin: 129px 0;
     }
 }
+
+@media (max-width: 1024px) {
+    .product {
+
+        &__foto {
+            max-width: 1024px;
+
+            &-slider {
+                
+                & img {
+                    
+                }
+            }
+        }
+
+        &__info {
+            max-width: 1024px;
+
+            &__wrap {
+                padding: 65px 100px!important;
+
+                &-darkhr {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
