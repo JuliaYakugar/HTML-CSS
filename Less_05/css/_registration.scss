@@ -85,3 +85,21 @@
         @include fontStyle($colorDarkBlack, 24px, 300);
     }
 }
+
+@media (max-width: 1024px) {
+
+    .registration {
+
+        &__wrap {
+            margin-top: 40px!important;
+            flex-wrap: nowrap;
+            gap: 22px;
+        }
+    }
+    .info {
+
+        & p, li {
+            font-size: 16px!important;
+        }
+    }
+}
