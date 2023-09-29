@@ -103,3 +103,24 @@
         }
     }
 }
+
+@media (max-width: 425px) {
+
+    .registration {
+        &__wrap {
+            flex-direction: column;
+        }
+
+        & .info {
+            width: 100%;
+        }
+
+        & .formdata {
+            width: 100%;
+
+            & input[type="text"], input[type="email"], input[type="password"] {
+                width: 100%;
+            }
+        }
+    }
+}
