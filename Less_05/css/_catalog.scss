@@ -22,7 +22,7 @@
                 cursor: pointer;
                 padding: 13px 16px 16px;
                 position: absolute;
-                z-index: 9999;
+                z-index: 5;
                 box-sizing: border-box;
 
                 &[open] {
@@ -213,4 +213,35 @@
         }
     }
     
+}
+
+@media (max-width: 425px) {
+
+    .catalog__filter-left {
+    
+        & span {
+            display: none;       
+        }
+
+        & svg {
+            height: 25px;
+            width: 37px;
+       }
+    }
+
+    .catalog__filter-center {
+        gap: 4px;
+
+        & summary {
+            padding-right: 0!important;
+        }
+    }
+
+    .items__picture {
+        height: auto!important;
+
+        & img {
+            width: 100%;
+        }
+    }
 }

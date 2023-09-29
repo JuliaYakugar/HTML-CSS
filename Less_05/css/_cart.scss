@@ -213,3 +213,56 @@
         }
     }
 }
+
+@media (max-width: 425px) {
+    .cart {
+
+        &__wrap {
+            margin-top: 39px!important;
+            margin-bottom: 96px!important;
+
+            &-items {
+
+                &-buttons {
+                    flex-direction: row;
+
+                    & button {
+                        padding: 8px 18px;
+                        font-size: 12px;
+                    }
+                }
+
+                &-block {
+                    height: 188px;
+                    margin-bottom: 30px;
+                }
+
+                &-info {
+                    margin: 13px 17px 0;;
+
+                    & p {
+                        font-size: 14px;
+    
+                        margin-bottom: 4px;
+                        &:nth-child(1) {
+                            font-size: 16px;
+                        }
+    
+                        &:nth-child(2) {
+                            font-size: 16px;
+                            margin-bottom: 25px;
+                        }
+
+                        & .quantity {
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+
+            &-order {
+                flex-direction: column;
+            }
+        }
+    }
+}
