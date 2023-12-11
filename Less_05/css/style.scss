@@ -218,6 +218,12 @@
     font-weight: 400;
     line-height: normal;
   }
+
+  .items__cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
   
   .items__card {
     max-width: 360px;
